@@ -3,9 +3,8 @@
   box-shadow: 0px 8px 11px -8px rgba(34, 60, 80, 0.09);
   margin-bottom: 15px;
   width: 100%;
-  padding: 25px 20px ;
+  padding: 25px 20px;
   border-radius: 5px;
- 
 }
 
 .fields_container {
@@ -32,8 +31,31 @@
   border: 0.5px solid black;
 }
 
+
 .button_container {
   width: 100%;
   text-align: right;
   margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .fields_container {
+    flex-direction: column; 
+    gap: 15px; 
+  }
+
+  .button_container {
+    text-align: center; 
+  }
+}
+
+@media (max-width: 480px) {
+  .todo_panel_container {
+    padding: 20px 15px; 
+  }
+
+  .field_container input {
+    font-size: 14px; 
+    padding: 8px 4px; 
+  }
 }
