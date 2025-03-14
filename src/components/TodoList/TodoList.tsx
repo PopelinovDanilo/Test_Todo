@@ -1,8 +1,7 @@
-import React from 'react';
+import React from "react";
 
-import { TodoItem } from './TodoItem/TodoItem.tsx';
-import { TodoPanel } from '../TodoPanel/TodoPanel.tsx';
-
+import { TodoItem } from "./TodoItem/TodoItem.tsx";
+import { TodoPanel } from "../TodoPanel/TodoPanel.tsx";
 
 export const TodoList: React.FC<TodoListProps> = ({
   todos,
@@ -10,12 +9,14 @@ export const TodoList: React.FC<TodoListProps> = ({
   changeTodo,
   deleteTodo,
   checkTodo,
-  selectTodoIdForEdit
+  selectTodoIdForEdit,
 }) => (
   <div>
     {todos.map((todo) => {
       if (todo.id === todoIdForEdit)
-        return <TodoPanel mode='edit' changeTodo={changeTodo} editTodo={todo} />;
+        return (
+          <TodoPanel mode="edit" changeTodo={changeTodo} editTodo={todo} />
+        );
       return (
         <TodoItem
           key={todo.id}

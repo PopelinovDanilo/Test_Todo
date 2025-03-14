@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import styles from './Button.module.css';
+import styles from "./Button.module.css";
 
 export const Button: React.FC<ButtonProps> = ({ color, children, onClick }) => {
   const className = `${styles.button} ${styles[`button_${color}`]}`;
