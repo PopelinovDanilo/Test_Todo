@@ -1,14 +1,6 @@
 import React from 'react';
 import { Button } from '../../Button/Button.tsx';
-
 import styles from './TodoItem.module.css';
-
-interface TodoItemProps {
-  todo: Todo;
-  deleteTodo: (id: Todo['id']) => void;
-  checkTodo: (id: Todo['id']) => void;
-  selectTodoIdForEdit: (id: Todo['id']) => void;
-}
 
 export const TodoItem: React.FC<TodoItemProps> = ({
   todo,

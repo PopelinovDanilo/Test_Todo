@@ -3,7 +3,7 @@ import { Header } from "./components/Header/Header.tsx";
 import { TodoPanel } from "./components/TodoPanel/TodoPanel.tsx";
 import { TodoList } from "./components/TodoList/TodoList.tsx";
 import './App.module.css';
-import { DEFAULT_TODO_LIST } from "./data/mockTodos.ts";
+import { DEFAULT_TODO_LIST } from "./Data/mockTodos.ts";
 
 function App() {
   const [todos, setTodos] = React.useState(DEFAULT_TODO_LIST);
