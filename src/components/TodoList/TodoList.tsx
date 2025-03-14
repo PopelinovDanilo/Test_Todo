@@ -3,14 +3,6 @@ import React from 'react';
 import { TodoItem } from './TodoItem/TodoItem.tsx';
 import { TodoPanel } from '../TodoPanel/TodoPanel.tsx';
 
-interface TodoListProps {
-  todoIdForEdit: Todo['id'] | null;
-  todos: Todo[];
-  deleteTodo: (id: Todo['id']) => void;
-  checkTodo: (id: Todo['id']) => void;
-  selectTodoIdForEdit: (id: Todo['id']) => void;
-  changeTodo: ({ name, description }: Omit<Todo, 'id' | 'checked'>) => void;
-}
 
 export const TodoList: React.FC<TodoListProps> = ({
   todos,
