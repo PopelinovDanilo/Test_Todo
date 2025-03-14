@@ -3,13 +3,7 @@ import { Header } from "./components/Header/Header.tsx";
 import { TodoPanel } from "./components/TodoPanel/TodoPanel.tsx";
 import { TodoList } from "./components/TodoList/TodoList.tsx";
 import './App.module.css';
-
-
-const DEFAULT_TODO_LIST = [
-  { id: 1, name: "task1", description: "description1", checked: "false" },
-  { id: 2, name: "task2", description: "description2", checked: "false" },
-  { id: 3, name: "task3", description: "description3", checked: "true" }
-]
+import { DEFAULT_TODO_LIST } from "./data/mockTodos.ts";
 
 function App() {
   const [todos, setTodos] = React.useState(DEFAULT_TODO_LIST);
@@ -44,7 +38,7 @@ function App() {
   const deleteTodo = (id: Todo['id']) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
-  console.log("todos", "setTodos", todos, setTodos);
+
   return (
     <div>
       <Header todoCount={todos.length}></Header>
