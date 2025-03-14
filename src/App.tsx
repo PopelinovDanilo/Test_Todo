@@ -3,8 +3,8 @@ import { Header } from "./components/Header/Header.tsx";
 import { TodoPanel } from "./components/TodoPanel/TodoPanel.tsx";
 import { TodoList } from "./components/TodoList/TodoList.tsx";
 import './App.module.css';
-import { DEFAULT_TODO_LIST } from "./data/mockTodos.ts";
-
+import { DEFAULT_TODO_LIST } from "./Data/mockTodos.ts";
+import styles from './App.module.css';
 function App() {
   const [todos, setTodos] = React.useState(DEFAULT_TODO_LIST);
   const [todoIdForEdit, setTodoIdForEdit] = React.useState<number | null>(null);
@@ -40,11 +40,13 @@ function App() {
   };
 
   return (
-    <div>
-      <Header todoCount={todos.length}></Header>
-      <TodoPanel addTodo={addTodo}> </TodoPanel>
-      <TodoList todos={todos} checkTodo={checkTodo} deleteTodo={deleteTodo} selectTodoIdForEdit={selectTodoIdForEdit}
-        changeTodo={changeTodo} todoIdForEdit={todoIdForEdit}></TodoList>
+    <div className={styles.app_container}>
+      <div className={styles.container}>
+        <Header todoCount={todos.length}></Header>
+        <TodoPanel addTodo={addTodo}> </TodoPanel>
+        <TodoList todos={todos} checkTodo={checkTodo} deleteTodo={deleteTodo} selectTodoIdForEdit={selectTodoIdForEdit}
+          changeTodo={changeTodo} todoIdForEdit={todoIdForEdit}></TodoList>
+      </div>
     </div>
   );
 }

@@ -9,7 +9,7 @@ export const Header: React.FC<HeaderProps> = ({ todoCount }) => (
 
     <div className={styles.header_container}>
         <div className={styles.header_title}>
-            Todolist <b>{todoCount}</b> task(s)
+           <h1> Todolist</h1> <b>{todoCount} task(s)</b>    
         </div>
 
     </div>
