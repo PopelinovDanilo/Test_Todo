@@ -3,21 +3,9 @@ import React from 'react';
 import { Button } from '../Button/Button.tsx';
 
 import styles from './TodoPanel.module.css';
-
 const DEFAULT_TODO = { name: '', description: '' };
 
-interface AddTodoPanelProps {
-  mode: 'add';
-  addTodo: ({ name, description }: Omit<Todo, 'id' | 'checked'>) => void;
-}
 
-interface EditTodoPanelProps {
-  mode: 'edit';
-  editTodo: Omit<Todo, 'id' | 'checked'>;
-  changeTodo: ({ name, description }: Omit<Todo, 'id' | 'checked'>) => void;
-}
-
-type TodoPanelProps = AddTodoPanelProps | EditTodoPanelProps;
 
 export const TodoPanel: React.FC<TodoPanelProps> = (props) => {
   const isEdit = props.mode === 'edit';
